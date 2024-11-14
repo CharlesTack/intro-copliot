@@ -67,6 +67,8 @@ button:hover {
 }
 .columns div {
     margin-bottom: 1em;
+    border: 1px solid red;
+    padding: 1em;
 }
 @media (min-width: 768px) {
     .columns {
