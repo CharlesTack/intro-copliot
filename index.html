@@ -4,52 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #f0f0f0;
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("nav-links");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
         }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1em;
-            text-align: center;
-            width: 100%;
-        }
-        main {
-            text-align: center;
-            padding: 2em;
-        }
-        footer {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1em;
-            text-align: center;
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 1em 2em;
-            cursor: pointer;
-            font-size: 1em;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    </script>
 </head>
 <body>
+    <nav>
+        <div>
+            <div style="color: white; font-size: 1.5em; font-weight: bold;">
+                <img src="logo.png" alt="Logo" style="height: 40px; vertical-align: middle;"> Your Logo
+            </div>
+            <div id="nav-links">
+                <a href="#">Home</a>
+                <a href="#section1">Section 1</a>
+                <a href="#section2">Section 2</a>
+            </div>
+            <div class="burger" onclick="toggleMenu()">
+                &#9776;
+            </div>
+        </div>
+    </nav>
     <header>
         <h1>Welcome to Our Landing Page</h1>
     </header>
@@ -57,6 +39,20 @@
         <h2>Discover Our Services</h2>
         <p>We offer a wide range of services to meet your needs.</p>
         <button>Learn More</button>
+        <div class="columns">
+            <div>
+                <h2>Column 1</h2>
+                <p>This is the content of column 1.</p>
+            </div>
+            <div>
+                <h2>Column 2</h2>
+                <p>This is the content of column 2.</p>
+            </div>
+            <div>
+                <h2>Column 3</h2>
+                <p>This is the content of column 3.</p>
+            </div>
+        </div>
     </main>
     <footer>
         <p>&copy; 2023 Your Company. All rights reserved.</p>

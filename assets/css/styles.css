@@ -1,0 +1,98 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #007BFF;
+    z-index: 1000;
+}
+nav div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
+}
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+    margin-top: 60px; /* Adjust this value based on the height of your nav bar */
+}
+main {
+    text-align: center;
+    padding: 2em;
+}
+footer {
+    background-color: #007BFF;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 1em 2em;
+    cursor: pointer;
+    font-size: 1em;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 2em;
+}
+.columns div {
+    margin-bottom: 1em;
+}
+@media (min-width: 768px) {
+    .columns {
+        flex-direction: row;
+    }
+    .columns div {
+        margin-bottom: 0;
+    }
+}
+.burger {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+}
+@media (max-width: 767px) {
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    #nav-links a {
+        margin: 1em 0;
+    }
+    .burger {
+        display: block;
+    }
+}
